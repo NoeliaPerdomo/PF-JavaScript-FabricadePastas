@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+   <!--Indicar a Internet Explorer que use el motor de renderizado más reciente-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+        <!--Hacer que las páginas web sean responsivas-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <!--Título pestaña de internet-->
+        <title>Fábrica de Pastas</title>
+        <link rel="icon" type="image/png" href="img/icono_navegador.png" />
+
+         <!--Vincular css-->
+        <link rel="stylesheet" href="./main.css"/>
+</head>
+
+<body>
+  <header>
+
+    <!-- Barra de navegación -->
+    <a href="">
+      <img src="img/Logo1.png" alt="">
+    </a>
+    <nav>
+      <a title="Home" href="#hero">HOME</a>
+      <a title="Sobre Nosotros" href="#">SOBRE NOSOTROS</a>
+      <a title="Elegí tu Pasta" href="#">ELEGÍ TU PASTA</a>
+      <a title="Sección de contacto" href="#">CONTÁCTANOS</a>
+    </nav>
+
+    <!-- Botón de carrito de compras -->
+      <label for="btnCarrito"><img src="img/cart.svg" alt="Carrito de Compras"></label>
+      <input type="checkbox" id="btnCarrito"/>
+      
+      
+    <!--Menu hamburguesa para pantallas más chicas-->
+      <form id="actions">
+      <label for="btnMenu"><img src="img/menu.svg" alt=""></label>
+
+      <input type="checkbox" id="btnMenu" />
+
+      <nav>
+      <a title="Home" href="#">HOME</a>
+      <a title="Sobre Nosotros" href="#">Sobre Nosotros</a>
+      <a title="Elegí tu Pasta" href="#">ELEGÍ TU PASTA</a>
+      <a title="Sección de contacto" href="#">CONTÁCTANOS</a>
+    </nav>
+
+    </form>
+  </header>
+
+    
+    <!-- Portada -->
+        <main id="portada">
+            <article id="contenido_portada">
+                <h1>FÁBRICA DE PASTAS</h1>
+                <h3>Sabores que abrazan el alma</h3>
+                                
+                <p>En nuestra cocina, la tradición italiana se transforma en momentos únicos. 
+                Pastas frescas, hechas a mano, con ingredientes seleccionados y todo el amor de casa. 
+                <br>¡Descubrí el placer de comer bien!</p>
+
+                <a href="#">HAZ TU PEDIDO</a>
+            </article>
+
+            <picture>
+                <img src="img/foto_portada.jpg" alt="">
+            </picture>
+        </main>
+
+
+    <!-- Sobre nosotros -->
+        <section id="sobre_nosotros">
+            <header>
+                <h3 id="titulo">NUESTRA HISTORIA</h3>
+            </header>
+
+            <section id="contenido">
+                
+                <section id="foto_perfil">
+                     <picture><img src="img/local.png" alt=""></picture>
+                </section>
+
+            <section id="columna_texto">
+                <p id="texto">
+                    Somos una fábrica de pastas caseras dedicada a lo que mejor sabemos hacer: elaborar pasta fresca de forma artesanal, todos los días. Nuestra misión es simple pero poderosa: llevar a tu mesa productos de calidad, hechos con ingredientes frescos y sin conservantes, como los de antes.
+                    Cada raviol, cada fideo y cada sorrentino que sale de nuestra cocina está hecho con cuidado, respeto por la tradición y mucho amor por la buena comida.
+                    Desde nuestra fábrica, te ofrecemos pastas listas para cocinar en casa, ideales para quienes valoran el sabor auténtico y quieren disfrutar de una comida casera sin complicaciones.
+                    Gracias por confiar en nosotros para ser parte de tus momentos en familia.
+                </p>
+            </section>
+            
+            </section>
+        </section>
+
+    <!-- Sección Elegí tu pasta-->
+        <section id="elegi_pasta">
+            <header>
+                <h3>ELEGÍ TU PASTA <span>y hacé el pedido online</span></h3>
+
+            <form method="get" id="formCategorias">
+
+                <input type="radio" name="categoria" id="c-todas" value="todas">
+                <label for="c-todas" class="active"><picture><img src="img/pastas_todas.png" alt=""></picture>Todas las opciones</label>
+
+                <input type="radio" name="categoria" id="ravioles" value="ravioles">
+                <label for="c-ravioles"><picture><img src="img/ravioles.png" alt=""></picture>Ravioles</label>
+
+                <input type="radio" name="categoria" id="sorrentinos" value="sorrentinos">
+                <label for="c-sorrentinos"><picture><img src="img/sorrentinos.png" alt=""></picture>Sorrentinos</label>
+
+                <input type="radio" name="categoria" id="tallarines" value="tallarines">
+                <label for="c-tallarines"><picture><img src="img/tallarines.png" alt=""></picture>Tallarines</label>
+
+            </form>
+            </header>
+
+            <!-- Pastas -->
+             <ul>
+
+                <!--Ravioles-->
+                <li>
+                    <picture><img src="img/ravioles_verdura.png" alt="Ravioles de Verdura"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Ravioles de Verdura</h3>
+                            <p>$180</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/ravioles_jyq.png" alt="Ravioles de Jamon y Queso"></picture>
+                    <ul>
+                        <li class="info">
+                            <h3>Ravioles de Jamón y Queso</h3>
+                            <p>$210</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/ravioles_lyr.png" alt="Ravioles de Lomito y Ricotta"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Ravioles de Lomito y Ricotta</h3>
+                            <p>$210</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+            <!--Sorrentinos-->
+                <li>
+                    <picture><img src="img/sorrentinos_jyq.png" alt="Sorrentinos de Jamón y Queso"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Sorrentinos de Jamón y Queso</h3>
+                            <p>$420</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/sorrentinos_espinaca.png" alt="Sorrentinos de Espinaca"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Sorrentinos de Espinaca</h3>
+                            <p>$390</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/sorrentinos_cyq.png" alt="Sorrentinos de Calabaza y Queso"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Sorrentinos de Calabaza y Queso</h3>
+                            <p>$420</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+            <!--Tallarines-->
+                <li>
+                    <picture><img src="img/tallarines_alhuevo.png" alt="Tallarines al huevo"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Tallarines al huevo</h3>
+                            <p>$190</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/tallarines_espinaca.png" alt="Tallarines de Espinaca"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Tallarines de Espinaca</h3>
+                            <p>$220</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <picture><img src="img/tallarines_morron.png" alt="Tallarines de Morrón"></picture>
+                
+                    <ul>
+                        <li class="info">
+                            <h3>Tallarines de Morrón</h3>
+                            <p>$220</p>
+                        </li>
+                        <li class="cart"></li>
+                        <form>
+                          <button><img src="img/carrito_agregar.png" alt="Agregar al carrito" /> Agregar al carrito</button>
+                        </form>
+                    </ul>
+                </li>
+
+             </ul>
+
+        </section>
+
+
+    <!-- Sección de contacto -->
+        <section id="contacto">
+            <header>
+                <h3>CONTACTÁNOS</h3>
+                <p>¿Tenés alguna consulta, duda o sugerencia?</p>
+                <p>Nos encanta escuchar a nuestros clientes. Escribinos y te responderemos lo antes posible. 
+                <br>Tu opinión nos ayuda a mejorar cada día.</p>
+            </header>
+
+            <section id="contenido_contacto">
+
+                <form id="formulario_contacto">
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+
+                    <input type="email" id="email" placeholder="E-mail" required>
+
+                    <textarea id="mensaje" placeholder="Escribe tu mensaje" rows="10" required></textarea>
+
+                    <button type="submit">✉️ Enviar Mensaje</button>
+                </form>
+            </section>
+        </section>
+
+               
+        <!-- Sección Pie de Página-->
+
+        <footer>
+            <section id="footer">
+
+                <section id="footer_contenido">
+                
+                <section id="contacto_footer">
+                    <h3>CONTACTO</h3>
+                    <p>📱 Whatsapp: 099 123 456</p>
+                    <p>✉️ Email: aldentepastas@gmail.com</p>
+                    <p>📍 Dirección: Colonia del Sacramento, Uruguay</p>
+                </section>
+
+                <section id="ubicacion_footer">
+                    <h3>UBICACIÓN</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2812.961299116754!2d-57.839935830323334!3d-34.46167017808796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2suy!4v1750542151310!5m2!1ses!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                <ul>
+                    <li><p>Diseñado y desarrollado con ❤️ por Noelia Perdomo</p></li>
+                </ul>
+            </section>
+            </section>
+        </footer>
+
+
+        <!-- Seccioón Script Javascript-->
+
+</body>
+</html>

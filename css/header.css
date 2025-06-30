@@ -1,0 +1,100 @@
+body > header{
+    width: 100vw;
+    background-color: var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem;
+
+     /* Mantengo la barra fija cuando hago scroll */
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+body > header > input[type="checkbox"]{
+    display: none;
+}
+
+body > header > a{
+    width: 16rem;
+}
+
+body > header > nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+body > header > nav > a{
+    color: var(--color-light);
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+body > header > nav > a:hover{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+body > header > form{
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+}
+
+body > header > form input[type="checkbox"]{
+    display: none;
+}
+
+body > header > form label{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body > header > form label svg{
+    fill: var(--color-light);
+    height: 100%;
+    object-fit: contain;
+}
+
+[for="#btnMenu"]{
+    display: none;
+}
+
+body > header > form > nav{
+    display: none;
+}
+
+ /* Fondo Difumado */
+body::before{
+    content: "";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(46, 46, 46, 0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+}
+
+
+/* Algun elemento dentro del body tiene que comlir cierta condicion (has) */
+body:has(#actions input[type="checkbox"]:checked)::before{
+    display: flex;
+}
