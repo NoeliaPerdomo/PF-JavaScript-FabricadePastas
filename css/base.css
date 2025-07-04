@@ -30,6 +30,7 @@ html{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -57,4 +58,11 @@ a{
 
 label, button{
     cursor: pointer;
+}
+
+#portada,
+#sobre_nosotros,
+#elegi_pasta,
+#contacto{
+    scroll-margin-top: 10rem;
 }

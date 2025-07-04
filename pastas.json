@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Ravioles de Verdura",
+        "price": "180",
+        "category": "Ravioles",
+        "cardImg": "/img/ravioles_verdura.png"
+    },
+
+    {
+        "id": 2,
+        "name": "Ravioles de Jamón y Queso",
+        "price": "210",
+        "category": "Ravioles",
+        "cardImg": "/img/ravioles_jyq.png"
+    },
+
+    {
+        "id": 3,
+        "name": "Ravioles de Lomito y Ricotta",
+        "price": "210",
+        "category": "Ravioles",
+        "cardImg": "/img/ravioles_lyr.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Sorrentinos de Jamón y Queso",
+        "price": "420",
+        "category": "Sorrentinos",
+        "cardImg": "/img/sorrentinos_jyq.png"
+    },
+
+    {
+        "id": 5,
+        "name": "Sorrentinos de Espinaca",
+        "price": "390",
+        "category": "Sorrentinos",
+        "cardImg": "/img/sorrentinos_espinaca.png"
+    },
+
+    {
+        "id": 6,
+        "name": "Sorrentinos de Calabaza y Queso",
+        "price": "420",
+        "category": "Sorrentinos",
+        "cardImg": "/img/sorrentinos_cyq.png"
+    },
+
+    {
+        "id": 7,
+        "name": "Tallarines al huevo",
+        "price": "190",
+        "category": "Tallarines",
+        "cardImg": "/img/tallarines_alhuevo.png"
+    },
+
+    {
+        "id": 8,
+        "name": "Tallarines de Espinaca",
+        "price": "220",
+        "category": "Tallarines",
+        "cardImg": "/img/tallarines_espinaca.png"
+    },
+
+    {
+        "id": 9,
+        "name": "Tallarines de Morrón",
+        "price": "220",
+        "category": "Tallarines",
+        "cardImg": "/img/tallarines_morron.png"
+    },
+
+    {
+        "id": 10,
+        "name":"Moñas",
+        "price": "250",
+        "category": "Otras Pastas",
+        "cardImg": "/img/monitas.png"
+    },
+
+    {
+        "id": 11,
+        "name":"Ñoquis de papa",
+        "price": "250",
+        "category": "Otras Pastas",
+        "cardImg": "/img/nioquis.png"
+    },
+
+    {
+        "id": 12,
+        "name":"Capellettis de pollo",
+        "price": "300",
+        "category": "Otras Pastas",
+        "cardImg": "/img/capellettis.png"
+    },
+
+    {
+        "id": 13,
+        "name":"Tortelines de cuatro quesos",
+        "price": "350",
+        "category": "Otras Pastas",
+        "cardImg": "/img/tortelines.png"
+    },
+
+    {
+        "id": 14,
+        "name":"Agnolottis de ricotta y nuez",
+        "price": "450",
+        "category": "Otras Pastas",
+        "cardImg": "/img/agnolottis.png"
+    }
+
+]

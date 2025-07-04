@@ -25,32 +25,28 @@
     <a href="">
       <img src="img/logo1.png" alt="">
     </a>
-    <nav>
-      <a title="Home" href="#hero">HOME</a>
-      <a title="Sobre Nosotros" href="#">SOBRE NOSOTROS</a>
-      <a title="Elegí tu Pasta" href="#">ELEGÍ TU PASTA</a>
-      <a title="Sección de contacto" href="#">CONTÁCTANOS</a>
+    <nav id="navbar">
+      <a title="Home" href="#portada">HOME</a>
+      <a title="Sobre Nosotros" href="#sobre_nosotros">SOBRE NOSOTROS</a>
+      <a title="Elegí tu Pasta" href="#elegi_pasta">ELEGÍ TU PASTA</a>
+      <a title="Sección de contacto" href="#contacto">CONTÁCTANOS</a>
     </nav>
-
-    <!-- Botón de carrito de compras -->
-      <label for="btnCarrito"><img src="img/cart.svg" alt="Carrito de Compras"></label>
-      <input type="checkbox" id="btnCarrito"/>
       
       
-    <!--Menu hamburguesa para pantallas más chicas-->
-      <form id="actions">
-      <label for="btnMenu"><img src="img/menu.svg" alt=""></label>
+    <form id="actions">
+        <button id="btnMenu"><img src="img/menu.svg" alt="" /></button>
 
-      <input type="checkbox" id="btnMenu" />
-
-      <nav>
-      <a title="Home" href="#">HOME</a>
-      <a title="Sobre Nosotros" href="#">Sobre Nosotros</a>
-      <a title="Elegí tu Pasta" href="#">ELEGÍ TU PASTA</a>
-      <a title="Sección de contacto" href="#">CONTÁCTANOS</a>
-    </nav>
-
+        <button id="btnCarrito"><img src="img/cart.svg" alt="Carrito de Compras" /></button>
     </form>
+
+    <section id="cart">
+     <header><h3>Carrito de Compras</h3></header>
+        <ul>
+            <li class="carrito_vacio">Tu carrito está vacío</li>
+        </ul>
+        <button id="btnVaciarCarrito">Vaciar Carrito</button>
+        <button id="btnFinalizarCompra">Finalizar Compra</button>
+    </section>
   </header>
 
     
@@ -408,6 +404,7 @@
 
 
         <!-- Seccioón Script Javascript-->
+        <script type ="module" src="app.js"></script>
 
 </body>
 </html>
