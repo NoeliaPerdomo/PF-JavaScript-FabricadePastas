@@ -1,4 +1,4 @@
-#contacto {
+#contacto{
   width: 100vw;
   background-color: var(--color-dark);
   padding: 4rem 2rem;
@@ -8,25 +8,25 @@
   gap: 2rem;
 }
 
-#contacto header {
+#contacto header{
   text-align: center;
   max-width: 800px;
 }
 
-#contacto header h3 {
+#contacto header h3{
   font-size: 2rem;
   color: var(--color-primary);
   margin-bottom: 1.5rem;
 }
 
-#contacto header p {
+#contacto header p{
   font-size: 1rem;
   color: var(--color-light);
   margin: 0.5rem 0;
   line-height: 1.5;
 }
 
-#contenido_contacto {
+#contenido_contacto{
   width: 100%;
   max-width: 600px;
   display: flex;
@@ -34,7 +34,7 @@
 }
 
 /* Formulario */
-#formulario_contacto {
+#formulario_contacto{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
 
 /* Area de texto */
 #formulario_contacto input,
-#formulario_contacto textarea {
+#formulario_contacto textarea{
   width: 100%;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
@@ -55,12 +55,12 @@
 }
 
 #formulario_contacto input::placeholder,
-#formulario_contacto textarea::placeholder {
+#formulario_contacto textarea::placeholder{
   color: #a0a0a0f7;
 }
 
 /* Botón */
-#formulario_contacto button {
+#formulario_contacto button{
   align-self: center;
   background-color: var(--color-accent);
   color: var(--color-light);
@@ -73,7 +73,7 @@
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#formulario_contacto button:hover {
+#formulario_contacto button:hover{
   background-color: var(--color-green);
   transform: scale(1.05);
 }

@@ -100,7 +100,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#elegi_pasta > ul > li:hover {
+#elegi_pasta > ul > li:hover{
     transform: scale(1.03);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
@@ -158,12 +158,12 @@
     padding: 0.7rem;
 }
 
-#elegi_pasta ul li form {
+#elegi_pasta ul li form{
   display: flex;
   justify-content: center;
 }
 
-#elegi_pasta ul li form button {
+#elegi_pasta ul li form button{
   display: inline-flex;
   align-items: center;
   background-color: var(--color-accent); 
@@ -176,7 +176,7 @@
   font-weight: 600;
 }
 
-#elegi_pasta ul li form button img {
+#elegi_pasta ul li form button img{
   width: 24px;
   height: 24px;
   object-fit: contain;
@@ -184,9 +184,157 @@
 }
 
 
-#elegi_pasta ul li form button:hover {
+#elegi_pasta ul li form button:hover{
   background-color: var(--color-green); 
   transform: scale(1.05);
   transition: all 0.2s ease-in-out;
 }
 
+
+
+/* Diseño responsivo */
+
+/* Pantallas medianas */
+
+@media (max-width: 1024px){
+  #elegi_pasta{
+    padding: 2rem 1rem;
+  }
+
+  #elegi_pasta header h3{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  #elegi_pasta header h3 span{
+    font-size: 1.1rem;
+  }
+
+  #elegi_pasta header form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #elegi_pasta header form label{
+    flex: 0 1 calc(45% - 1rem);
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+  }
+
+  #elegi_pasta header form label picture{
+    width: 24px;
+    height: 24px;
+  }
+
+  #elegi_pasta > ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  #elegi_pasta > ul > li{
+    max-width: 300px;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #elegi_pasta > ul > li > picture{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 1rem;
+  }
+}
+
+
+/* Pantallas chicas */
+
+@media (max-width: 768px){
+  
+    #elegi_pasta{
+    padding: 2rem 1.5rem;
+  }
+
+  #elegi_pasta header h3{
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+  }
+
+  #elegi_pasta header h3 span{
+    font-size: 1.2rem;
+  }
+
+  #elegi_pasta header form{
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  #elegi_pasta header form label{
+    width: 100%;         
+    max-width: 320px;      
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    gap: 0.5rem;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #elegi_pasta header form label picture{
+    width: 28px;
+    height: 28px;
+  }
+
+  #elegi_pasta > ul{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+  }
+
+  #elegi_pasta > ul > li{
+    max-width: 320px;
+    width: 90%;
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  #elegi_pasta > ul > li > picture{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 1rem;
+  }
+
+  #elegi_pasta ul li form button{
+    font-size: 1rem;
+    padding: 0.7rem 1.1rem;
+  }
+
+  #elegi_pasta ul li form button img{
+    width: 22px;
+    height: 22px;
+    margin-right: 0.5rem;
+  }
+}

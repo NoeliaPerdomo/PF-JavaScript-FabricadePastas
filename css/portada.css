@@ -29,7 +29,7 @@
     font-weight: 500;
     font-family: Poppins, sans-serif;
     color: var(--color-secondary);
-
+    margin: 0;
 }
 
 #contenido_portada p{
@@ -37,6 +37,7 @@
     font-weight: 400;
     font-family: Poppins, sans-serif;
     color: var(--color-light);
+    padding: 0 3rem;
 }
 
 #contenido_portada a{
@@ -61,7 +62,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-#portada picture {
+#portada picture{
   width: 45%;
   min-width: 300px;
   display: flex;
@@ -70,10 +71,114 @@
   padding: 1rem;
 }
 
-#portada picture img {
+#portada picture img{
   width: 100%;
   max-width: 500px;
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   height: auto;
+}
+
+
+/* Diseño responsivo */
+
+/* Pantallas medianas */
+
+@media (max-width: 1024px){
+  
+  #portada{
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  #contenido_portada{
+    width: 80%;
+    align-items: center;
+    padding: 0;
+  }
+
+  #contenido_portada h1{
+    font-size: 2.1rem;
+  }
+
+  #contenido_portada h3{
+    font-size: 1.1rem;
+  }
+
+  #contenido_portada p{
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  #contenido_portada a{
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  #portada picture{
+    width: 80%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #portada picture img{
+    width: 100%;
+    max-width: 400px; 
+  }
+}
+
+
+/* Pantallas chicas */
+
+@media (max-width: 768px){
+  
+  #portada{
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  #contenido_portada{
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  #contenido_portada h1{
+    font-size: 1.8rem;
+  }
+
+  #contenido_portada h3{
+    font-size: 1rem;
+  }
+
+  #contenido_portada p{
+    font-size: 0.95rem;
+    line-height: 1.6rem;
+  }
+
+  #contenido_portada a{
+    width: 60%;
+    max-width: 220px;
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #portada picture{
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  #portada picture img{
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
 }
