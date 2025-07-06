@@ -141,3 +141,39 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     cursor: pointer;
   }
 }
+
+/* Pantallas mas chicas */
+
+@media (max-width: 480px){
+
+  body > header {
+    padding: 0.5rem 0.8rem;
+  }
+
+  body > header > a {
+    width: 8rem;
+  }
+
+  body > header > form button {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  body > header > form button svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  #navbar {
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+  }
+
+  #navbar a {
+    font-size: 1rem;
+  }
+
+  body::before {
+    backdrop-filter: blur(3px);
+  }
+}
