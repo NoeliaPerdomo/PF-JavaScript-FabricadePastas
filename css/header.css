@@ -209,6 +209,7 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     top: 100%; 
     left: 0;
     width: 100%;
+    max-height:fit-content;
     background-color: var(--color-dark);
     border-top: 2px solid var(--color-accent);
     display: none;
