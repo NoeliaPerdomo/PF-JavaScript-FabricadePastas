@@ -161,12 +161,12 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     z-index: 10;
   }
 
-  /* Logo más chico y centrado */
+  /* Logo a la izquierda */
   body > header > a {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: left;
     width: auto;
     max-width: 140px;
   }
@@ -174,7 +174,8 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
   /* Botones a la derecha */
   body > header > form {
     display: flex;
-    align-items: center;
+    gap: 0.3rem;
+    align-items: right;
     justify-content: flex-end;
   }
 
@@ -194,7 +195,7 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     fill: var(--color-light);
   }
 
-  /* Mostrar botón de menú */
+  
   #btnMenu {
     display: flex !important;
     background: none;
@@ -202,10 +203,10 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     cursor: pointer;
   }
 
-  /* Menú hamburguesa desplegable justo debajo del header */
+
   #navbar {
     position: absolute;
-    top: 100%; /* Justo debajo del header */
+    top: 100%; 
     left: 0;
     width: 100%;
     background-color: var(--color-dark);
