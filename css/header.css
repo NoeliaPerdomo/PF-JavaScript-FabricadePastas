@@ -168,7 +168,7 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     justify-content: center;
     align-items: center;
     width: auto;
-    max-width: 120px;
+    max-width: 140px;
   }
 
   /* Botones a la derecha */
