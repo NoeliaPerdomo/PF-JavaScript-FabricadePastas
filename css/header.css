@@ -174,7 +174,6 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
   /* Botones a la derecha */
   body > header > form {
     display: flex;
-    gap: 0.5rem;
     align-items: center;
     justify-content: flex-end;
   }
