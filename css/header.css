@@ -175,8 +175,8 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
   body > header > form {
     display: flex;
     gap: 0.3rem;
-    padding: 0;
-    margin-right: auto;
+    align-items: right;
+    justify-content: flex-end;
   }
 
   body > header > form button {
