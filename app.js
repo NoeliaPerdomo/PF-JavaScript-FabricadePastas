@@ -16,3 +16,4 @@ btnMenu.addEventListener("click", (e) => {
   e.preventDefault();
   navbar.classList.toggle("active");
 });
+
