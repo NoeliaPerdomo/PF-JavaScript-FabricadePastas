@@ -214,7 +214,8 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     border-left: 3px solid var(--color-accent);
     border-right: 3px solid var(--color-accent);
     border-bottom: 3px solid var(--color-accent);
-    border-radius: 40%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
     display: none;
     flex-direction: column;
     align-items: center;
