@@ -51,7 +51,7 @@ body > header > form{
 }
 
 body > header > form button{   
-    width: 2rem;
+    width: 5rem;
     aspect-ratio: 1/1;
     display: flex;
     align-items: center;
