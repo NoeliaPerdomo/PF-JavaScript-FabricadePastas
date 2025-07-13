@@ -103,15 +103,15 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     position: fixed;
     top: 12.2rem;
     right: 0;
-    width: 45%;
+    width: 50%;
     max-height: fit-content;
     height: calc(100vh - 5rem);
-    background-color: var(--nav-bg, var(--color-dark));
-    border-left: 4px solid var(--color-primary);
-    border-bottom: 4px solid var(--color-primary);
-    border-right: 4px solid var(--color-primary);
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    background-color: var(--nav-bg, var(--color-accent));
+    border-left: 3px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -168,6 +168,117 @@ body > header > form button {
     cursor: pointer;
   }
 }
+
+@media (max-width: 768px) {
+
+    body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    z-index: 10;
+  }
+
+  body > header > a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    width: auto;
+    max-width: 140px;
+  }
+
+  body > header > form {
+    display: flex;
+    gap: 0.3rem;
+    align-items: right;
+    justify-content: flex-end;
+  }
+
+  body > header > form button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  body > header > form button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--color-light);
+  }
+  
+  #btnMenu {
+    display: flex !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  #navbar {
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    width: 60%;
+    max-height: fit-content;
+    background-color: var(--color-accent);
+    border-left: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    z-index: 9;
+  }
+
+  #navbar.active {
+    display: flex;
+  }
+
+  #navbar a {
+    color: var(--color-light);
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Montserrat, sans-serif;
+    text-decoration: none;
+  }
+
+  #navbar a:hover {
+    color: var(--color-primary);
+  }
+
+  /* Fondo difuminado cuando el menú está activo */
+  body::before {
+    content: "";
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    background-color: rgba(46, 46, 46, 0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+  }
+
+  body:has(#navbar.active)::before,
+  body:has(#cart.active)::before {
+    display: block;
+  }
+}
+
+
 
 
 
@@ -230,14 +341,14 @@ body > header > form button {
     position: absolute;
     top: 100%; 
     right: 0;
-    width: 60%;
+    width: 90%;
     max-height: fit-content;
-    background-color: var(--color-dark);
+    background-color: var(--color-accent);
     border-left: 3px solid var(--color-primary);
     border-right: 3px solid var(--color-primary);
     border-bottom: 3px solid var(--color-primary);
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     display: none;
     flex-direction: column;
     align-items: center;
