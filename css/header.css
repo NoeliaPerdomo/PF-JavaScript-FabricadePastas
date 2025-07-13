@@ -341,7 +341,7 @@ body > header > form button {
     position: absolute;
     top: 100%; 
     right: 0;
-    width: 90%;
+    width: 80%;
     max-height: fit-content;
     background-color: var(--color-accent);
     border-left: 3px solid var(--color-primary);
