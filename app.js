@@ -15,6 +15,8 @@ btnMenu.addEventListener("click", (e) => {
   navbar.classList.toggle("active");
 });
 
+const inputCategorias = document.querySelectorAll("[name='categoria']");
+
 // Mostrar/Ocultar carrito
 const btnCarrito = document.getElementById("btnCarrito");
 const cart = document.getElementById("cart");
@@ -23,4 +25,18 @@ btnCarrito.addEventListener("click", (e) => {
   e.preventDefault();
   cart.classList.toggle("active");
 });
+
+
+
+// Productos
+const leerArchivo = async () => await  (await fetch("/pastas.json")).json();
+const mostrarPorductos = () => {
+  
+};
+
+
+const tarjetaProducto = () => {};
+const setearFiltro = () => {};
+
+catalogo = await leerArchivo();
 
