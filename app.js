@@ -108,7 +108,7 @@ btnCarrito.addEventListener("click", (e) => {
   cart.classList.toggle("active");
 });
 
-// 🛒 Carrito
+// Carrito
 const agregarProducto = (id) => {
   const producto = catalogo.find((p) => p.id == id);
   if (!producto) return;
@@ -170,18 +170,26 @@ const crearItemCarrito = (item) => {
 
   const actions = document.createElement("div");
   const btnReduce = document.createElement("button");
+  const btnRemove = document.createElement("button");
   const outputQty = document.createElement("output");
   const btnAdd = document.createElement("button");
 
+  btnRemove.setAttribute("type", "button");
   btnReduce.type = btnAdd.type = "button";
   btnReduce.textContent = "-";
   btnAdd.textContent = "+";
+  btnRemove.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-icon lucide-trash"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`;
   outputQty.value = item.cantidad;
 
   btnReduce.addEventListener("click", () => reducirCantidad(item.id));
   btnAdd.addEventListener("click", () => agregarProducto(item.id));
 
-  actions.append(btnReduce, outputQty, btnAdd);
+  btnRemove.addEventListener("click", (e) => {
+    e.preventDefault();
+    quitarProducto(item.id);
+  });
+
+  actions.append(item.cantidad > 1 ? btnReduce : btnRemove, outputQty, btnAdd);
   element.append(actions);
 
   return element;
