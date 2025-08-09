@@ -8,6 +8,7 @@ const listProducts = document.querySelector("#elegi_pasta > ul");
 const btnMore = document.querySelector("#btnMore");
 const cart = document.querySelector("#cart");
 const listCart = document.querySelector("#cart > ul");
+const btnRemoveAll = document.querySelector("#btnRemoveAll");
 const navbar = document.querySelector("#navbar");
 const btnMenu = document.querySelector("#btnMenu");
 const btnCarrito = document.querySelector("#btnCarrito");
@@ -140,12 +141,6 @@ const reducirCantidad = (id) => {
   mostrarCarrito();
 };
 
-const vaciarCarrito = () => {
-  carrito = [];
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-  mostrarCarrito();
-};
-
 const mostrarCarrito = () => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   listCart.innerHTML = "";
@@ -189,6 +184,7 @@ const crearItemCarrito = (item) => {
     quitarProducto(item.id);
   });
 
+
   actions.append(item.cantidad > 1 ? btnReduce : btnRemove, outputQty, btnAdd);
   element.append(actions);
 
@@ -198,5 +194,15 @@ const crearItemCarrito = (item) => {
 // Inicializar carrito visible
 mostrarCarrito();
 
-// Vaciar carrito botón
-document.getElementById("btnVaciarCarrito").addEventListener("click", vaciarCarrito);
+// Vaciar carrito
+
+const vaciarCarrito = () => {
+  carrito = [];
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  mostrarCarrito();
+};
+
+btnRemoveAll.addEventListener("click", (e) => {
+  e.preventDefault();
+  vaciarCarrito();
+});

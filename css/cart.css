@@ -11,9 +11,11 @@
   transform: translateX(100%);
   transition: transform 250ms ease-out;
   z-index: 20;
-  max-height: 90vh;
-  max-width: 400px;
+
+  max-height: calc(100vh - 13rem);
+  max-width: 450px;
   overflow-y: auto;
+  
   border-left: 3px solid var(--color-primary);
   border-bottom: 3px solid var(--color-primary);
   border-right: 3px solid var(--color-primary);
@@ -35,6 +37,50 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
+#cart header {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  gap: 1rem;               
+  flex-wrap: wrap;         
+  text-align: center;
+}
+
+#cart header h3 {
+  margin: 0;
+  font-size: 1rem; 
+}
+
+#cart header form {
+  margin: 0; 
+}
+
+#cart header form button {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; 
+  background-color: var(--color-secondary);
+  color: var(--color-light);
+  font-family: Montserrat, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.6rem; 
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+#cart header form button svg {
+  width: 16px;
+  height: 16px;
+}
+
+#cart header form button:hover {
+  background-color: var(--color-secondary-dark, #444);
+}
+
 
 #cart ul {
   display: flex;
@@ -123,7 +169,7 @@
   font-weight: bold;
 }
 
-/* Botones generales (vaciar/finalizar) */
+/* Botones */
 #cart > button {
   display: inline-block;
   justify-content: center;
