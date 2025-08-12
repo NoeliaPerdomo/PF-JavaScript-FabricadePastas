@@ -1,5 +1,5 @@
 body > header{
-    width: 100vw;
+    width: 100%;
     background-color: var(--color-accent);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
