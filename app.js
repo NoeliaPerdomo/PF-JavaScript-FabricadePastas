@@ -9,6 +9,9 @@ const btnMore = document.querySelector("#btnMore");
 const cart = document.querySelector("#cart");
 const listCart = document.querySelector("#cart > ul");
 const btnRemoveAll = document.querySelector("#btnRemoveAll");
+const subtotalCart = document.querySelector("#subtotal");
+const shippingCart = document.querySelector("#shipping");
+const totalCart = document.querySelector("#total");
 const navbar = document.querySelector("#navbar");
 const btnMenu = document.querySelector("#btnMenu");
 const btnCarrito = document.querySelector("#btnCarrito");
@@ -148,6 +151,11 @@ const mostrarCarrito = () => {
     listCart.innerHTML = `<li class="carrito_vacio">Tu carrito está vacío</li>`;
     return;
   }
+
+  // Calcular subtotal, envío y total
+  subtotalCart.innerHTML = carrito.reduce((a, i) => (a += i.bid * i.cantidad), 0);
+  
+
   carrito.forEach((i) => listCart.append(crearItemCarrito(i)));
 };
 
@@ -204,5 +212,9 @@ const vaciarCarrito = () => {
 
 btnRemoveAll.addEventListener("click", (e) => {
   e.preventDefault();
-  vaciarCarrito();
+  let empty = confirm("¿Estás seguro de que quieres vaciar el carrito?");
+  if(empty){
+    vaciarCarrito();
+  }
 });
+

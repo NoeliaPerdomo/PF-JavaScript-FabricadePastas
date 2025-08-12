@@ -3,7 +3,7 @@ body > header{
     background-color: var(--color-accent);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
-    flex-flow: row wrap;;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
     padding: 0.7rem;
@@ -83,12 +83,13 @@ body::before{
     background-color: rgba(46, 46, 46, 0.5);
     backdrop-filter: blur(4px);
     display: none;
+    pointer-events: none;
 }
 
 
 /* Algun elemento dentro del body tiene que comlir cierta condicion (has) */
 body:has(#navbar.active)::before , body:has(#cart.active)::before{
-    display: flex;
+    display: block;
 }
 
 
@@ -159,16 +160,12 @@ body > header > form button {
   padding: 0;
 }
 
+}
 
   /* Botón de menú visible solo en móvil */
   #btnMenu{
     display: flex !important;
     background: none;
-    border: none;
-    cursor: pointer;
-  }
-}
-
 @media (max-width: 768px) {
 
     body > header {
@@ -177,6 +174,16 @@ body > header > form button {
     align-items: center;
     padding: 0.6rem 1rem;
     position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    z-index: 10;
+  }
+
+  /* Ajusta el padding-top del body para móviles */
+  body {
+    padding-top: 4rem;
+  }
     top: 0;
     left: 0;
     background-color: var(--color-accent);
@@ -274,19 +281,24 @@ body > header > form button {
 
   body:has(#navbar.active)::before,
   body:has(#cart.active)::before {
-    display: block;
-  }
-}
-
-
-
-
-
-/* Pantallas mas chicas */
-
 @media (max-width: 480px) {
 
   body > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--color-accent);
+    z-index: 10;
+  }
+
+  /* Ajusta el padding-top del body para pantallas pequeñas */
+  body {
+    padding-top: 4rem;
+  }
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -392,4 +404,4 @@ body > header > form button {
     display: block;
   }
 }
-
+}

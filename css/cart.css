@@ -1,7 +1,8 @@
+/* Carrito */
 #cart {
   position: fixed;
   right: 0;
-  top: 12.2rem;
+  top: 11.58rem;
   background-color: var(--color-accent);
   padding: 2rem;
   display: flex;
@@ -10,34 +11,18 @@
   gap: 1.5rem;
   transform: translateX(100%);
   transition: transform 250ms ease-out;
-  z-index: 20;
 
-  max-height: calc(100vh - 13rem);
+
+  height: calc(100vh - 11.58rem); 
   max-width: 450px;
   overflow-y: auto;
-  
-  border-left: 3px solid var(--color-primary);
-  border-bottom: 3px solid var(--color-primary);
-  border-right: 3px solid var(--color-primary);
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #cart.active {
   transform: translateX(0);
 }
 
-#cart header h3 {
-  font-family: Montserrat, sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  color: var(--color-primary);
-  text-align: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
+/* Header del carrito */
 #cart header {
   display: flex;
   justify-content: center; 
@@ -45,15 +30,15 @@
   gap: 1rem;               
   flex-wrap: wrap;         
   text-align: center;
+  width: 100%;
 }
 
 #cart header h3 {
-  margin: 0;
-  font-size: 1rem; 
-}
-
-#cart header form {
-  margin: 0; 
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin: 0.5rem 0;
 }
 
 #cart header form button {
@@ -81,7 +66,7 @@
   background-color: var(--color-secondary-dark, #444);
 }
 
-
+/* Lista de productos */
 #cart ul {
   display: flex;
   flex-direction: column;
@@ -161,7 +146,6 @@
   justify-content: center;
 }
 
-
 #cart li output {
   min-width: 2rem;
   text-align: center;
@@ -197,13 +181,31 @@
   color: var(--color-dark, #111);
 }
 
+/* Footer */
+#cart footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-primary);
+}
+
+#cart footer dt {
+  font-weight: 600;
+}
+
+#cart footer dd {
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   #cart {
-    top: 7.1rem;
+    top: 0;
     max-width: 100%;
     border-radius: 0;
-    height: auto;
+    height: 100vh;
   }
 
   #cart li {
@@ -220,4 +222,3 @@
     margin: 0.5rem 0;
   }
 }
-
