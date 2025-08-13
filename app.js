@@ -149,15 +149,25 @@ const mostrarCarrito = () => {
   listCart.innerHTML = "";
   if (carrito.length === 0) {
     listCart.innerHTML = `<li class="carrito_vacio">Tu carrito está vacío</li>`;
+    subtotalCart.innerHTML = `$ 0`;
+    shippingCart.innerHTML = `$ 0`;
+    totalCart.innerHTML = `$ 0`;
     return;
   }
 
   // Calcular subtotal, envío y total
-  subtotalCart.innerHTML = carrito.reduce((a, i) => (a += i.bid * i.cantidad), 0);
+  let subTotal = carrito.reduce((a, i) => a + (Number(i.price) * Number(i.cantidad)), 0)
+  subtotalCart.innerHTML = `$ ${subTotal}`;
+  let envio = 0
+  if (subTotal < 1000) {
+    envio = 150
+  }
+  shippingCart.innerHTML = `$ ${envio}`
+  totalCart.innerHTML = `$ ${subTotal + envio}`
   
-
   carrito.forEach((i) => listCart.append(crearItemCarrito(i)));
 };
+
 
 const crearItemCarrito = (item) => {
   const element = document.createElement("li");
