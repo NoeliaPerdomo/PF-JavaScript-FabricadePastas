@@ -288,7 +288,7 @@ body > header > form button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -300,7 +300,7 @@ body > header > form button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 0.5rem;
+    padding: 0.6rem 1rem;
     position: sticky;
     top: 0;
     left: 0;
