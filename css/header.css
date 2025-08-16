@@ -298,7 +298,6 @@ body > header > form button{
 
   /* Ajusta el padding-top del body para pantallas pequeñas */
   body{
-    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
