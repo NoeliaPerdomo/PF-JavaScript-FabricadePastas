@@ -108,11 +108,6 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     max-height: fit-content;
     height: calc(100vh - 5rem);
     background-color: var(--nav-bg, var(--color-accent));
-    border-left: 3px solid var(--color-primary);
-    border-bottom: 3px solid var(--color-primary);
-    border-right: 3px solid var(--color-primary);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -128,19 +123,21 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
   }
 
   #navbar a{
-    color: var(--color-light);
+    color: var(--color-primary);
     font-size: 1rem;
     font-weight: 500;
     font-family: Montserrat, sans-serif;
     text-decoration: none;
     transition: color 0.2s ease;
+    padding-bottom: 1rem;
+    border-bottom: 0.8px solid var(--color-grey);
   }
 
   #navbar a:hover{
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
-  body > header > form {
+  body > header > form{
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -149,7 +146,7 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
   margin-left: auto; 
 }
 
-body > header > form button {
+body > header > form button{
   width: 2.2rem;
   height: 2.2rem;
   display: flex;
@@ -160,15 +157,19 @@ body > header > form button {
   padding: 0;
 }
 
+#btnMenu{
+    display: flex !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 }
 
   /* Botón de menú visible solo en móvil */
-  #btnMenu{
-    display: flex !important;
-    background: none;
 @media (max-width: 768px) {
 
-    body > header {
+    body > header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -181,16 +182,14 @@ body > header > form button {
   }
 
   /* Ajusta el padding-top del body para móviles */
-  body {
-    padding-top: 4rem;
-  }
+  body{
     top: 0;
     left: 0;
     background-color: var(--color-accent);
     z-index: 10;
   }
 
-  body > header > a {
+  body > header > a{
     flex: 1;
     display: flex;
     justify-content: center;
@@ -199,14 +198,14 @@ body > header > form button {
     max-width: 140px;
   }
 
-  body > header > form {
+  body > header > form{
     display: flex;
     gap: 0.3rem;
     align-items: right;
     justify-content: flex-end;
   }
 
-  body > header > form button {
+  body > header > form button{
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -216,57 +215,55 @@ body > header > form button {
     border: none;
   }
 
-  body > header > form button svg {
+  body > header > form button svg{
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--color-light);
   }
   
-  #btnMenu {
+  #btnMenu{
     display: flex !important;
     background: none;
     border: none;
     cursor: pointer;
   }
 
-  #navbar {
+  #navbar{
     position: absolute;
     top: 100%; 
     right: 0;
-    width: 60%;
+    width: 55%;
     max-height: fit-content;
-    background-color: var(--color-accent);
-    border-left: 3px solid var(--color-primary);
-    border-right: 3px solid var(--color-primary);
-    border-bottom: 3px solid var(--color-primary);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    display: none;
+    height: calc(100vh - 5rem);
+    background-color: var(--nav-bg, var(--color-accent));
+    display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
     padding: 2rem 1rem;
-    gap: 1.5rem;
-    z-index: 9;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
   }
 
-  #navbar.active {
+  #navbar.active{
     display: flex;
   }
 
-  #navbar a {
-    color: var(--color-light);
+  #navbar a{
+    color: var(--color-primary);
     font-size: 1rem;
     font-weight: 500;
     font-family: Montserrat, sans-serif;
     text-decoration: none;
   }
 
-  #navbar a:hover {
-    color: var(--color-primary);
+  #navbar a:hover{
+    color: var(--color-secondary);
   }
 
   /* Fondo difuminado cuando el menú está activo */
-  body::before {
+  body::before{
     content: "";
     position: fixed;
     z-index: 1;
@@ -281,9 +278,13 @@ body > header > form button {
 
   body:has(#navbar.active)::before,
   body:has(#cart.active)::before {
-@media (max-width: 480px) {
+    display: block;
+  }
 
-  body > header {
+
+@media (max-width: 480px){
+
+  body > header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -296,9 +297,8 @@ body > header > form button {
   }
 
   /* Ajusta el padding-top del body para pantallas pequeñas */
-  body {
-    padding-top: 4rem;
-  }
+  body{
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -310,7 +310,7 @@ body > header > form button {
     z-index: 10;
   }
 
-  body > header > a {
+  body > header > a{
     flex: 1;
     display: flex;
     justify-content: center;
@@ -319,14 +319,14 @@ body > header > form button {
     max-width: 140px;
   }
 
-  body > header > form {
+  body > header > form{
     display: flex;
     gap: 0.3rem;
     align-items: right;
     justify-content: flex-end;
   }
 
-  body > header > form button {
+  body > header > form button{
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -336,44 +336,39 @@ body > header > form button {
     border: none;
   }
 
-  body > header > form button svg {
+  body > header > form button svg{
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--color-light);
   }
   
-  #btnMenu {
+  #btnMenu{
     display: flex !important;
     background: none;
     border: none;
     cursor: pointer;
   }
 
-  #navbar {
+  #navbar{
     position: absolute;
     top: 100%; 
     right: 0;
     width: 80%;
     max-height: fit-content;
     background-color: var(--color-accent);
-    border-left: 3px solid var(--color-primary);
-    border-right: 3px solid var(--color-primary);
-    border-bottom: 3px solid var(--color-primary);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
     display: none;
     flex-direction: column;
     align-items: center;
     padding: 2rem 1rem;
-    gap: 1.5rem;
+    gap: 2rem;
     z-index: 9;
   }
 
-  #navbar.active {
+  #navbar.active{
     display: flex;
   }
 
-  #navbar a {
+  #navbar a{
     color: var(--color-light);
     font-size: 1rem;
     font-weight: 500;
@@ -381,7 +376,7 @@ body > header > form button {
     text-decoration: none;
   }
 
-  #navbar a:hover {
+  #navbar a:hover{
     color: var(--color-primary);
   }
 
