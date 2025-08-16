@@ -281,6 +281,7 @@ body > header > form button{
     display: block;
   }
 
+  /*
 
 @media (max-width: 480px){
 
@@ -288,7 +289,7 @@ body > header > form button{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.6rem 0rem;
+    padding: 0.6rem 1rem;
     position: sticky;
     top: 0;
     left: 0;
@@ -378,7 +379,7 @@ body > header > form button{
     color: var(--color-primary);
   }
 
-  /* Fondo difuminado cuando el menú está activo */
+  /* Fondo difuminado cuando el menú está activo 
   body::before {
     content: "";
     position: fixed;
@@ -397,4 +398,5 @@ body > header > form button{
     display: block;
   }
 }
+*/
 }
