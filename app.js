@@ -228,3 +228,12 @@ btnRemoveAll.addEventListener("click", (e) => {
   }
 });
 
+
+//Bloquear scroll cuando el menú o carrito están activos
+const toggleBodyScroll = () => {
+  if (navbar.classList.contains("active") || cart.classList.contains("active")) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "";
+  }
+}
