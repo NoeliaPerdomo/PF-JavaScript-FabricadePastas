@@ -170,7 +170,9 @@ body > header > form button{
 
 @media (max-width: 768px) {
 
-  html, body { overflow-x: hidden; }
+  html, body{
+     overflow-x: hidden;
+    }
 
   body:has(#navbar.active),
   body:has(#cart.active) {
