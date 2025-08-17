@@ -167,25 +167,25 @@ body > header > form button{
 }
 
   /* Botón de menú visible solo en móvil */
+
 @media (max-width: 768px) {
 
-    body > header{
+  html, body { overflow-x: hidden; }
+
+  body:has(#navbar.active),
+  body:has(#cart.active) {
+    overflow: hidden;
+  }
+
+  body > header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1rem;
     position: sticky;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     background-color: var(--color-accent);
-    z-index: 10;
-  }
-
-  body{
-    top: 0;
-    left: 0;
-    background-color: var(--color-accent);
-    z-index: 10;
+    z-index: 30;
   }
 
   body > header > a{
@@ -205,35 +205,29 @@ body > header > form button{
   }
 
   body > header > form button{
-    width: 2.5rem;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
+    width: 2.5rem; height: 2.5rem;
+    display: flex; align-items: center; justify-content: center;
+    background-color: transparent; border: none;
   }
 
   body > header > form button svg{
-    width: 2.5rem;
-    height: 2.5rem;
-    fill: var(--color-light);
+    width: 2.5rem; height: 2.5rem; fill: var(--color-light);
   }
   
   #btnMenu{
     display: flex !important;
-    background: none;
-    border: none;
+    background: none; 
+    border: none; 
     cursor: pointer;
   }
 
   #navbar{
-    position: absolute;
-    top: 100%; 
+    position: fixed;
+    top: 7rem;
     right: 0;
-    width: 55%;
-    max-height: fit-content;
-    height: calc(100vh - 5rem);
+    width: 80vw;
+    max-width: 420px;
+    height: calc(100vh - 7rem);
     background-color: var(--nav-bg, var(--color-accent));
     display: flex;
     flex-direction: column;
@@ -242,11 +236,11 @@ body > header > form button{
     gap: 2rem;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 10;
+    z-index: 40;
   }
 
   #navbar.active{
-    display: flex;
+    transform: translateX(0);
   }
 
   #navbar a{
@@ -261,15 +255,12 @@ body > header > form button{
     color: var(--color-secondary);
   }
 
-  /* Fondo difuminado cuando el menú está activo */
   body::before{
     content: "";
     position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
+    z-index: 20;
+    top: 0; left: 0;
+    width: 100dvw; height: 100dvh;
     background-color: rgba(46, 46, 46, 0.5);
     backdrop-filter: blur(4px);
     display: none;
@@ -279,5 +270,4 @@ body > header > form button{
   body:has(#cart.active)::before {
     display: block;
   }
-
 }

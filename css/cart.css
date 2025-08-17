@@ -203,10 +203,15 @@
 /* Responsive */
 @media (max-width: 768px) {
   #cart {
-    top: 7rem; /* Ajusta la altura para que no cubra el header */
+    top: 7rem;
     max-width: 80%;
     border-radius: 0;
-    height: 100vh;
+    height: calc(100vh - 7rem);
+    z-index: 40;
+  }
+
+  #cart.active{
+    transform: translateX(0);
   }
 
   #cart li {
@@ -223,3 +228,4 @@
     margin: 0.5rem 0;
   }
 }
+
