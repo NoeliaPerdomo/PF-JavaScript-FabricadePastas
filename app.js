@@ -104,12 +104,16 @@ btnMenu.addEventListener("click", (e) => {
   e.preventDefault();
   cart.classList.remove("active");
   navbar.classList.toggle("active");
+  if (navbar.classList.contains("active")) bloquearScroll();
+  else habilitarScroll();
 });
 
 btnCarrito.addEventListener("click", (e) => {
   e.preventDefault();
   navbar.classList.remove("active");
   cart.classList.toggle("active");
+  if (cart.classList.contains("active")) bloquearScroll();
+  else habilitarScroll();
 });
 
 // Carrito
@@ -230,10 +234,12 @@ btnRemoveAll.addEventListener("click", (e) => {
 
 
 //Bloquear scroll cuando el menú o carrito están activos
-const toggleBodyScroll = () => {
-  if (navbar.classList.contains("active") || cart.classList.contains("active")) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+function bloquearScroll() {
+  document.body.style.overflow = 'hidden';
+  document.body.style.touchAction = 'none'; // 👈 bloquea scroll táctil
+}
+
+function habilitarScroll() {
+  document.body.style.overflow = '';
+  document.body.style.touchAction = '';
 }
