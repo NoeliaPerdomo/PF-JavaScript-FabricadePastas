@@ -270,4 +270,18 @@ body > header > form button{
   body:has(#cart.active)::before {
     display: block;
   }
+
+  /* Cuando menú o carrito están abiertos, bloquea scroll del fondo */
+body:has(#navbar.active),
+body:has(#cart.active) {
+  overflow: hidden;
+  height: 100vh; /* fija la ventana para que no se mueva el fondo */
+}
+
+/* El menú (navbar) puede tener su propio scroll */
+#navbar {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* scroll suave en móviles */
+}
+
 }

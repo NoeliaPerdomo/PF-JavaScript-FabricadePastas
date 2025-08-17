@@ -227,5 +227,12 @@
     width: 100%;
     margin: 0.5rem 0;
   }
+
+  /* El carrito puede scrollear su propio contenido */
+#cart {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 }
 
