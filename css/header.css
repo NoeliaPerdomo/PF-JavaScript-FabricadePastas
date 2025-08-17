@@ -281,7 +281,8 @@ body:has(#cart.active) {
 /* El menú (navbar) puede tener su propio scroll */
 #navbar {
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* scroll suave en móviles */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 }

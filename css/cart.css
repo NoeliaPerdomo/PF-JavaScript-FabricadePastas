@@ -232,6 +232,7 @@
 #cart {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 }
