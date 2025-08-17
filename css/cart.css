@@ -205,6 +205,7 @@
   #cart {
     top: 7rem;
     max-width: 80%;
+    padding-bottom: 6rem;
     border-radius: 0;
     height: calc(100vh - 7rem);
     z-index: 40;
