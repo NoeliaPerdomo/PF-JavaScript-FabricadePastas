@@ -233,6 +233,8 @@ btnRemoveAll.addEventListener("click", (e) => {
 });
 
 
+
+
 //Bloquear scroll cuando el menú o carrito están activos
 function bloquearScroll() {
   document.body.style.overflow = 'hidden';
@@ -243,3 +245,27 @@ function habilitarScroll() {
   document.body.style.overflow = '';
   document.body.style.touchAction = '';
 }
+
+
+// Scroll a sección y cierre correcto del menú 
+const menuLinks = document.querySelectorAll('#navbar a');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+
+    // Cerrar menú primero y desbloquear scroll
+    if(navbar.classList.contains('active')){
+      navbar.classList.remove('active');
+      habilitarScroll();
+    }
+
+    // Esperamos un poco para que se aplique el desbloqueo
+    setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }, 50); // 50ms es suficiente
+  });
+});
+
