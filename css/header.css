@@ -182,7 +182,7 @@ body > header > form button{
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1rem;
-    position: sticky;
+    position: fixed;
     top: 0; left: 0;
     background-color: var(--color-accent);
     z-index: 30;
