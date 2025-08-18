@@ -168,7 +168,7 @@ const mostrarCarrito = () => {
   }
   shippingCart.innerHTML = `$ ${envio}`
   totalCart.innerHTML = `$ ${subTotal + envio}`
-  
+
   carrito.forEach((i) => listCart.append(crearItemCarrito(i)));
 };
 
@@ -227,7 +227,7 @@ const vaciarCarrito = () => {
 btnRemoveAll.addEventListener("click", (e) => {
   e.preventDefault();
   let empty = confirm("¿Estás seguro de que quieres vaciar el carrito?");
-  if(empty){
+  if (empty) {
     vaciarCarrito();
   }
 });
@@ -257,7 +257,7 @@ menuLinks.forEach(link => {
     const target = document.getElementById(targetId);
 
     // Cerrar menú primero y desbloquear scroll
-    if(navbar.classList.contains('active')){
+    if (navbar.classList.contains('active')) {
       navbar.classList.remove('active');
       habilitarScroll();
     }

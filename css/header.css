@@ -1,106 +1,102 @@
-body > header{
-    width: 100%;
-    background-color: var(--color-accent);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem;
+body>header {
+  width: 100%;
+  background-color: var(--color-accent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
 
-     /* Mantengo la barra fija cuando hago scroll */
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 9;
+  /* Mantengo la barra fija cuando hago scroll */
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
 }
 
-body > header > a{
-    width: 16rem;
+body>header>a {
+  width: 16rem;
 }
 
-#navbar{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
+#navbar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
 
-#navbar a{
-    color: var(--color-light);
-    font-weight: 500;
-    font-family: Montserrat, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 0.9rem;
+#navbar a {
+  color: var(--color-light);
+  font-weight: 500;
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.9rem;
 }
 
-#navbar a:hover{
-    color: var(--color-primary);
-    font-weight: 600;
+#navbar a:hover {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
-
-body > header > form{
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
-    align-items: center;
-    padding: 2rem;
+body>header>form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem;
 }
 
-body > header > form button{   
-    width: 5rem;
-    aspect-ratio: 1/1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
+body>header>form button {
+  width: 5rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
 }
 
-body > header > form button svg{
-    fill: var(--color-light);
-    height: 100%;
-    object-fit: contain;
+body>header>form button svg {
+  fill: var(--color-light);
+  height: 100%;
+  object-fit: contain;
 }
 
-#btnMenu{
-    display: none;
+#btnMenu {
+  display: none;
 }
 
-
- /* Fondo Difumado */
-body::before{
-    content: "";
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100dvw;
-    height: 100dvh;
-    background-color: rgba(46, 46, 46, 0.5);
-    backdrop-filter: blur(4px);
-    display: none;
-    pointer-events: none;
+/* Fondo Difumado */
+body::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: rgba(46, 46, 46, 0.5);
+  backdrop-filter: blur(4px);
+  display: none;
+  pointer-events: none;
 }
-
 
 /* Algun elemento dentro del body tiene que comlir cierta condicion (has) */
-body:has(#navbar.active)::before , body:has(#cart.active)::before{
-    display: block;
+body:has(#navbar.active)::before,
+body:has(#cart.active)::before {
+  display: block;
 }
-
 
 
 /* Diseño responsivo */
 
 /*Pantallas medianas */
+@media (max-width: 1032px) {
 
-@media (max-width: 1032px){
-  
-  #navbar{
+  #navbar {
     position: fixed;
     top: 12.2rem;
     right: 0;
@@ -117,12 +113,12 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     transition: transform 0.3s ease-in-out;
     z-index: 10;
   }
-  
-  #navbar.active{
+
+  #navbar.active {
     transform: translateX(0);
   }
 
-  #navbar a{
+  #navbar a {
     color: var(--color-primary);
     font-size: 1rem;
     font-weight: 500;
@@ -133,64 +129,65 @@ body:has(#navbar.active)::before , body:has(#cart.active)::before{
     border-bottom: 0.8px solid var(--color-grey);
   }
 
-  #navbar a:hover{
+  #navbar a:hover {
     color: var(--color-secondary);
   }
 
-  body > header > form{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem; 
-  padding: 0.5rem 0.5rem; 
-  margin-left: auto; 
-}
+  body>header>form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    margin-left: auto;
+  }
 
-body > header > form button{
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
+  body>header>form button {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
 
-#btnMenu{
+  #btnMenu {
     display: flex !important;
     background: none;
     border: none;
     cursor: pointer;
-}
+  }
 
 }
 
-  /* Botón de menú visible solo en móvil */
 
 @media (max-width: 768px) {
 
-  html, body{
-     overflow-x: hidden;
-    }
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
   body:has(#navbar.active),
   body:has(#cart.active) {
     overflow: hidden;
   }
 
-  body > header{
+  body>header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.6rem 1rem;
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background-color: var(--color-accent);
     z-index: 30;
   }
 
-  body > header > a{
+  body>header>a {
     flex: 1;
     display: flex;
     justify-content: center;
@@ -199,31 +196,37 @@ body > header > form button{
     max-width: 140px;
   }
 
-  body > header > form{
+  body>header>form {
     display: flex;
     gap: 0.3rem;
     align-items: right;
     justify-content: flex-end;
   }
 
-  body > header > form button{
-    width: 2.5rem; height: 2.5rem;
-    display: flex; align-items: center; justify-content: center;
-    background-color: transparent; border: none;
+  body>header>form button {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
   }
 
-  body > header > form button svg{
-    width: 2.5rem; height: 2.5rem; fill: var(--color-light);
+  body>header>form button svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--color-light);
   }
-  
-  #btnMenu{
+
+  #btnMenu {
     display: flex !important;
-    background: none; 
-    border: none; 
+    background: none;
+    border: none;
     cursor: pointer;
   }
 
-  #navbar{
+  #navbar {
     position: fixed;
     top: 7rem;
     right: 0;
@@ -241,11 +244,11 @@ body > header > form button{
     z-index: 40;
   }
 
-  #navbar.active{
+  #navbar.active {
     transform: translateX(0);
   }
 
-  #navbar a{
+  #navbar a {
     color: var(--color-primary);
     font-size: 1rem;
     font-weight: 500;
@@ -253,16 +256,18 @@ body > header > form button{
     text-decoration: none;
   }
 
-  #navbar a:hover{
+  #navbar a:hover {
     color: var(--color-secondary);
   }
 
-  body::before{
+  body::before {
     content: "";
     position: fixed;
     z-index: 20;
-    top: 0; left: 0;
-    width: 100dvw; height: 100dvh;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
     background-color: rgba(46, 46, 46, 0.5);
     backdrop-filter: blur(4px);
     display: none;
@@ -274,17 +279,16 @@ body > header > form button{
   }
 
   /* Cuando menú o carrito están abiertos, bloquea scroll del fondo */
-body:has(#navbar.active),
-body:has(#cart.active) {
-  overflow: hidden;
-  height: 100vh; /* fija la ventana para que no se mueva el fondo */
-}
+  body:has(#navbar.active),
+  body:has(#cart.active) {
+    overflow: hidden;
+    height: 100vh;
+  }
 
-/* El menú (navbar) puede tener su propio scroll */
-#navbar {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-}
-
+  /* El menú (navbar) puede tener su propio scroll */
+  #navbar {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
 }

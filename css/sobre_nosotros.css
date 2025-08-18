@@ -1,4 +1,4 @@
-#sobre_nosotros{
+#sobre_nosotros {
   width: 100vw;
   margin: 0;
   padding: 2rem 10rem;
@@ -9,7 +9,7 @@
   color: var(--text_black);
 }
 
-#sobre_nosotros h3{
+#sobre_nosotros h3 {
   font-size: 2.2rem;
   font-weight: 700;
   font-family: Poppins, sans-serif;
@@ -17,7 +17,7 @@
   padding-bottom: 1rem;
 }
 
-#contenido{
+#contenido {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   width: 100%;
 }
 
-#foto_perfil img{
+#foto_perfil img {
   width: 300px;
   max-width: 100%;
   object-fit: cover;
@@ -34,7 +34,7 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.20);
 }
 
-#columna_texto{
+#columna_texto {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -49,38 +49,36 @@
 }
 
 
-
-
 /* Diseño responsivo */
 
 /* Pantallas medianas */
 
-@media (max-width: 1200px){
-  
-  #sobre_nosotros{
+@media (max-width: 1200px) {
+
+  #sobre_nosotros {
     padding: 4rem 3rem;
     text-align: center;
   }
 
-  #contenido{
+  #contenido {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
   }
 
-  #foto_perfil img{
+  #foto_perfil img {
     width: 100%;
     max-width: 280px;
     height: auto;
   }
 
-  #columna_texto{
+  #columna_texto {
     padding-left: 0;
     font-size: 1rem;
     line-height: 2rem;
   }
 
-  #sobre_nosotros h3{
+  #sobre_nosotros h3 {
     font-size: 2rem;
   }
 }
@@ -88,32 +86,32 @@
 
 /* Pantallas chicas */
 
-@media (max-width: 768px){
-  
-  #sobre_nosotros{
+@media (max-width: 768px) {
+
+  #sobre_nosotros {
     padding: 3rem 2rem;
     text-align: center;
   }
 
-  #contenido{
+  #contenido {
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
   }
 
-  #foto_perfil img{
+  #foto_perfil img {
     width: 100%;
     max-width: 240px;
     height: auto;
   }
 
-  #columna_texto{
+  #columna_texto {
     padding-left: 0;
     font-size: 0.95rem;
     line-height: 1.7rem;
   }
 
-  #sobre_nosotros h3{
+  #sobre_nosotros h3 {
     font-size: 1.6rem;
   }
 }
